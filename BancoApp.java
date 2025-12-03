@@ -30,7 +30,42 @@ public final class BancoApp {
       System.out.print("Elige una opción: ");
 
       opcion = entrada.nextInt();
+
+      switch (opcion) {
+        case 1:
+          System.out.print("Cantidad a añadir: ");
+          cuenta.añadirDinero(entrada.nextDouble());
+          break;
+
+        case 2:
+          System.out.print("Cantidad a retirar: ");
+          cuenta.retirarDinero(entrada.nextDouble());
+          break;
+
+        case 3:
+          System.out.print("Cantidad a donar: ");
+          cuenta.donarDinero(entrada.nextDouble());
+          break;
+
+        case 4:
+          System.out.print("Costo del servicio: ");
+          cuenta.pagarServicio(entrada.nextDouble());
+          break;
+
+        case 5:
+          System.out.println("Saliendo...");
+          break;
+
+        default:
+          System.out.println("Opción inválida.");
+          break;
+      }
+
+      System.out.println("Saldo actual: $" + cuenta.getSaldo());
+      System.out.println();
     }
+
   }
 }
+
 
