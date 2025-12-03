@@ -65,6 +65,7 @@ public final class BancoApp {
       System.out.println();
     }
 
+    entrada.close();
   }
 }
 
