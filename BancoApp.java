@@ -1,6 +1,8 @@
 import java.util.Scanner;
 
-
+/**
+ * Clase principal que ejecuta el menú del sistema bancario.
+ */
 public final class BancoApp {
 
   // Constructor privado para evitar instanciación.
