@@ -34,7 +34,7 @@ public final class BancoApp {
       switch (opcion) {
         case 1:
           System.out.print("Cantidad a añadir: ");
-          cuenta.añadirDinero(entrada.nextDouble());
+          cuenta.agregarDinero(entrada.nextDouble());
           break;
 
         case 2:
