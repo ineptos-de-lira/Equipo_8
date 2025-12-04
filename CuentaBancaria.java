@@ -34,38 +34,38 @@ public class CuentaBancaria {
     }
     return false;
   }
-    /**
-   * Retira dinero si la cantidad es válida y hay saldo suficiente.
-   *
-   * @param cantidad monto a retirar
-   * @return true si se retiró, false si no
-   */
-  public boolean retirarDinero(final double cantidad) {
-    if (cantidad > 0 && saldo >= cantidad) {
-      saldo -= cantidad;
-      return true;
-    }
-    return false;
-  }
-
   /**
-   * Dona dinero si hay saldo suficiente.
-   *
-   * @param cantidad monto a donar
-   * @return true si se completó la donación, false si no
-   */
-  public boolean donarDinero(final double cantidad) {
-    return retirarDinero(cantidad);
+ * Retira dinero si la cantidad es válida y hay saldo suficiente.
+ *
+ * @param cantidad el monto a retirar
+ * @return true si se retiró el dinero, false en caso contrario
+ */
+public boolean retirarDinero(final double cantidad) {
+  if (cantidad > 0 && saldo >= cantidad) {
+    saldo -= cantidad;
+    return true;
   }
+  return false;
+}
 
-  /**
-   * Paga un servicio si hay saldo suficiente.
-   *
-   * @param costo costo del servicio
-   * @return true si se pagó, false si no
-   */
-  public boolean pagarServicio(final double costo) {
-    return retirarDinero(costo);
-  }
+/**
+ * Dona dinero si hay saldo suficiente.
+ *
+ * @param cantidad el monto a donar
+ * @return true si se completó la donación, false en caso contrario
+ */
+public boolean donarDinero(final double cantidad) {
+  return retirarDinero(cantidad);
+}
+
+/**
+ * Paga un servicio si hay saldo suficiente.
+ *
+ * @param costo el costo del servicio
+ * @return true si se pagó el servicio, false en caso contrario
+ */
+public boolean pagarServicio(final double costo) {
+  return retirarDinero(costo);
+}
 
 }
