@@ -64,7 +64,7 @@ public boolean donarDinero(final double cantidad) {
  * @param costo el costo del servicio
  * @return true si se pagó el servicio, false en caso contrario
  */
-ppublic boolean pagarServicio(final double costo) {
+public boolean pagarServicio(final double costo) {
   return retirarDinero(costo);
  }
 
