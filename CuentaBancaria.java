@@ -46,7 +46,7 @@ public boolean retirarDinero(final double cantidad) {
     return true;
   }
   return false;
-}
+  }
 
 /**
  * Dona dinero si hay saldo suficiente.
@@ -56,7 +56,7 @@ public boolean retirarDinero(final double cantidad) {
  */
 public boolean donarDinero(final double cantidad) {
   return retirarDinero(cantidad);
-}
+  }
 
 /**
  * Paga un servicio si hay saldo suficiente.
@@ -64,8 +64,8 @@ public boolean donarDinero(final double cantidad) {
  * @param costo el costo del servicio
  * @return true si se pagó el servicio, false en caso contrario
  */
-public boolean pagarServicio(final double costo) {
+ppublic boolean pagarServicio(final double costo) {
   return retirarDinero(costo);
-}
+ }
 
 }
